@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
-    font-family: beyond;
+
 }
 
 @font-face {
@@ -10,7 +9,8 @@
     src: url(../fonts/beyond_the_mountains/beyond_the_mountains.otf);
 }
 
-h1 {
+
+.showcase {
     font-family: 'beyond_the_mountains';
     font-size: 6em;
     text-align: center;
@@ -96,7 +96,77 @@ nav .icon-burger .line {
     transition: all .3s ease-in-out;
 }
 
+/* our story */
+.story-images {
+    display: flex;
+    flex-direction: row;
+}
+
+.tomato-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5% 0;
+    width: 100%;
+}
+
+.tomato{
+    width: 3%;
+}
+
+
+.img-right img{
+    width: 100%;
+    margin: 0 !important;
+}
+
+.img-left img{
+    width: 100%;
+}
+
+.story-title{
+    font-family: 'beyond_the_mountains';
+    font-size: 4vw;
+    text-align: center;
+    color: black;
+}
+
+.story-content{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 8% 0;
+    width: 100%;
+    font-size: 1.2vw;
+}
+
+.story-content-left, .story-content-right {
+    margin: 0 10px;
+}
+
+.mobilestory-content {
+    display: none;
+}
+
+/* media */
+
 @media screen and (max-width: 768px) {
+    @font-face {
+        font-family: 'Roboto-Light';
+        src: url(../fonts/Roboto/Roboto-Light.ttf);
+    }
+    .showcase {
+        font-family: 'beyond_the_mountains';
+        font-size: 3em;
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%;
+        color: white;
+    }
     nav .links {
         float: none;
         display: flex;
@@ -134,4 +204,23 @@ nav .icon-burger .line {
     nav :checked~.icon-burger .line:nth-child(2) {
         opacity: 0;
     }
+    /* story */
+    .story-content{
+        display: none;
+    }
+
+    .mobilestory-content{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 8px;
+        font-size: 1.2em;
+        font-family: 'Roboto-Light'
+    }
+    .story-content-left, .story-content-right{
+        margin: 10px;
+
+    }
+
+    
 }
